@@ -1,0 +1,113 @@
+/* =============================================
+   AR PAGE STYLES
+   ============================================= */
+
+.ar-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, transparent 60%), #0a0a1a;
+}
+
+.ar-hero-content {
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.ar-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(135deg, #06b6d4, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.ar-hero p {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.ar-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ar-intro-grid, .ar-advantages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.ar-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ar-feature-card, .ar-app-card {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ar-feature-card:hover, .ar-app-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+.ar-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.ar-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 15, 46, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.ar-comparison-table th, .ar-comparison-table td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+}
+
+.ar-comparison-table th {
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  font-weight: 600;
+}
+
+.ar-comparison-table tr:hover td {
+  background: rgba(6, 182, 212, 0.05);
+}
+
+.ar-advantage-item, .ar-challenge-item {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #10b981;
+}
+
+.ar-challenge-item {
+  border-left: 4px solid #f59e0b;
+}
+
+@media (max-width: 768px) {
+  .ar-intro-grid, .ar-features-grid, .ar-applications-grid, .ar-advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}

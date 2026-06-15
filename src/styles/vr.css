@@ -1,0 +1,136 @@
+/* =============================================
+   VR PAGE STYLES
+   ============================================= */
+
+.vr-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 60%), #0a0a1a;
+}
+
+.vr-hero-content {
+  max-width: 900px;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.vr-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.vr-hero .hero-subtitle {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.vr-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vr-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.vr-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.vr-feature-card {
+  background: rgba(15, 15, 46, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vr-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.vr-feature-card h3 {
+  color: #fff;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.vr-feature-card p {
+  color: #94a3b8;
+}
+
+.vr-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.vr-app-card {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid #3b82f6;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  border-right: 1px solid rgba(59, 130, 246, 0.2);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.vr-app-card:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.vr-challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vr-challenges-list li {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.advantages-limitations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.vr-future-section {
+  background: linear-gradient(135deg, rgba(15, 15, 46, 0.8), rgba(15, 15, 46, 0.8)), url('/future-bg.jpg');
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 3rem;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .vr-intro-grid,
+  .vr-features-grid,
+  .vr-applications-grid,
+  .advantages-limitations-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,101 @@
+/* =============================================
+   FUTURE PAGE STYLES
+   ============================================= */
+
+.future-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(244, 63, 94, 0.15) 0%, transparent 60%), #0a0a1a;
+}
+
+.future-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(135deg, #f43f5e, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.future-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.future-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.future-topic-card {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  border-top: 4px solid #f43f5e;
+  transition: all 0.3s ease;
+}
+
+.future-topic-card:nth-child(2) { border-top-color: #8b5cf6; }
+.future-topic-card:nth-child(3) { border-top-color: #06b6d4; }
+.future-topic-card:nth-child(4) { border-top-color: #10b981; }
+.future-topic-card:nth-child(5) { border-top-color: #f59e0b; }
+.future-topic-card:nth-child(6) { border-top-color: #6366f1; }
+
+.future-topic-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.2);
+}
+
+.future-predictions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.future-prediction-card {
+  background: rgba(15, 15, 46, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.future-prediction-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #f43f5e, #8b5cf6, #06b6d4);
+  opacity: 0.5;
+}
+
+.future-careers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.future-security-section {
+  background: rgba(244, 63, 94, 0.05);
+  border-left: 4px solid #f43f5e;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .future-careers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .future-topics-grid { grid-template-columns: 1fr; }
+  .future-careers-grid { grid-template-columns: 1fr; }
+}
