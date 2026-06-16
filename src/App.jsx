@@ -1,10 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import VR from './pages/VR';
-import AR from './pages/AR';
-import MR from './pages/MR';
-import Future from './pages/Future';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+import Geapi from './pages/Geapi';
+import Holobox from './pages/Holobox';
+import Monotech from './pages/Monotech';
+import Nbg from './pages/Nbg';
+import Piindustries from './pages/Piindustries';
+import Tafear from './pages/Tafear';
+import TafeSandune from './pages/TafeSandune';
+import Tsvr from './pages/Tsvr';
+import Training from './pages/Training';
+
 import './styles/global.css';
 
 const App = () => {
@@ -13,11 +19,16 @@ const App = () => {
       <div className="app-container">
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/vr" element={<VR />} />
-            <Route path="/ar" element={<AR />} />
-            <Route path="/mr" element={<MR />} />
-            <Route path="/future" element={<Future />} />
+            <Route path="/" element={<Navigate to="/monotech" replace />} />
+            <Route path="/geapi" element={<Geapi />} />
+            <Route path="/holobox" element={<Holobox />} />
+            <Route path="/monotech" element={<Monotech />} />
+            <Route path="/nbg" element={<Nbg />} />
+            <Route path="/piindustries" element={<Piindustries />} />
+            <Route path="/tafear" element={<Tafear />} />
+            <Route path="/tafesandune" element={<TafeSandune />} />
+            <Route path="/tsvr" element={<Tsvr />} />
+            <Route path="/training" element={<Training />} />
           </Routes>
         </main>
       </div>

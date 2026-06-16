@@ -13,14 +13,22 @@ const VideoPlayer = ({ src }) => {
     }
   }, [src]);
 
+  if (!src) {
+    return (
+      <div className="video-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b' }}>
+        <p>Video will be connected later.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="video-container">
       <video
         ref={videoRef}
         controls
         autoPlay
+        muted
         playsInline
-        muted={false} /* Unmuted by default as requested, user can press play if browser blocks autoplay */
         className="responsive-video"
       >
         <source src={src} type="video/mp4" />
